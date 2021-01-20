@@ -52,19 +52,14 @@ Please run ```pip install -r requirements.txt```
 ```
 C:.
 │   Metro_Interstate_Traffic_Volume.csv
-│   Neural Networks for Univariate Variables.ipynb
+│   Time-Series-Forecasting-with-Keras.ipynb
 │
 └───model
-        bi_lstm_model_hs.h5
-        bi_lstm_model_sss.h5
-        cnn_model_hs.h5
-        cnn_model_sss.h5
-        ed_lstm_model_hs.h5
-        ed_lstm_model_sss.h5
-        gru_model_hs.h5
-        gru_model_sss.h5
-        lstm_model_hs.h5
-        lstm_model_sss.h5
+        bi_lstm_model_multi.h5
+        cnn_model_multi.h5
+        ed_lstm_model_multi.h5
+        gru_model_multi.h5
+        lstm_model_multi.h5
 ```
 
 Besides the Jupyter notebook and the dataframe I created a model file.
@@ -98,27 +93,23 @@ I used five different Neural Networks:
 + Encoder Decoder LSTM
 + CNN
 
-I trained each of them in two different ways:
-
-+ Single Step Style
-+ Horizon Style
-
 Here is an overview of the results:
 
 ![overview_results](images/overview_results.png)
 
-The Long short-term memory model with a RMSE (root-mean-square error) of 533 is almost 60% better than the CNN model which is the worst of all. 
-
+The CNN model with a RMSE (root-mean-square error) of 806 is many times better than the LSTM model with a RMSE value of 3165 which is the worst of all.
  
 
 <a name="link_publication"></a>
 
 ## Link to the Publication
 
-Here is the link to my blog post: [Time Series Analysis - Neural Networks for Univariate Time Series](https://michael-fuchs-python.netlify.app/2020/11/01/time-series-analysis-neural-networks-for-forecasting-univariate-variables/). In it I explained the exact difference of the methods used and described my procedure in detail.
+Here is the link to my blog post: [Time Series Analysis - Neural Networks with multiple predictors](https://michael-fuchs-python.netlify.app/2020/11/04/time-series-analysis-neural-networks-with-multiple-predictors/). In it I explained the exact difference of the methods used and described my procedure in detail.
 
 If this repository/publication helped you, you are welcome to read other blog posts I wrote on the topic of time series analysis: 
 
++ [XGBoost for Univariate Time Series](https://michael-fuchs-python.netlify.app/2020/11/10/time-series-analysis-xgboost-for-univariate-time-series/)
++ [Neural Networks for Univariate Time Series](https://michael-fuchs-python.netlify.app/2020/11/01/time-series-analysis-neural-networks-for-forecasting-univariate-variables/)
 + [Regression Extension Techniques for Univariate Time Series](https://michael-fuchs-python.netlify.app/2020/10/29/time-series-analysis-regression-extension-techniques-for-forecasting-multivariate-variables/)
 + [Regression Extension Techniques for Multivariate Time Series](https://michael-fuchs-python.netlify.app/2020/10/27/time-series-analysis-regression-extension-techniques-for-forecasting-univariate-variables/)
 + [Smoothing Methods](https://michael-fuchs-python.netlify.app/2020/10/23/time-series-analysis-smoothing-methods/)
